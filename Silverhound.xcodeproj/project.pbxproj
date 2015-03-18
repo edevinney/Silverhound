@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		648352731AB9CC3A00F85818 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 648352711AB9CC3A00F85818 /* Default.png */; };
+		648352741AB9CC3A00F85818 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 648352721AB9CC3A00F85818 /* icon.png */; };
 		64858A201AB21375006E496D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64858A1F1AB21375006E496D /* main.m */; };
 		64858A231AB21375006E496D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64858A221AB21375006E496D /* AppDelegate.m */; };
 		64858A261AB21375006E496D /* Silverhound.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64858A241AB21375006E496D /* Silverhound.xcdatamodeld */; };
-		64858A291AB21375006E496D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64858A281AB21375006E496D /* ViewController.m */; };
 		64858A2C1AB21375006E496D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64858A2A1AB21375006E496D /* Main.storyboard */; };
 		64858A2E1AB21375006E496D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64858A2D1AB21375006E496D /* Images.xcassets */; };
 		64858A311AB21375006E496D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64858A2F1AB21375006E496D /* LaunchScreen.xib */; };
 		64858A3D1AB21375006E496D /* SilverhoundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64858A3C1AB21375006E496D /* SilverhoundTests.m */; };
+		649986831AB215A900045F5A /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 649986821AB215A900045F5A /* Contents.json */; };
+		6499868F1AB2713200045F5A /* CoinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499868D1AB2713200045F5A /* CoinTableViewCell.m */; };
+		649986901AB2713200045F5A /* CoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6499868E1AB2713200045F5A /* CoinTableViewCell.xib */; };
+		649986961AB2749F00045F5A /* CoinTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 649986951AB2749F00045F5A /* CoinTableViewController.m */; };
+		649986981AB27D5200045F5A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 649986971AB27D5200045F5A /* CoreData.framework */; };
+		649ABFA51AB9F1E9001A35E2 /* silverhound.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 649ABFA41AB9F1E9001A35E2 /* silverhound.sqlite */; };
+		649ABFDD1ABA290E001A35E2 /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = 649ABFDC1ABA290E001A35E2 /* Coin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,20 +36,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		648352711AB9CC3A00F85818 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		648352721AB9CC3A00F85818 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		64858A1A1AB21375006E496D /* Silverhound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Silverhound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64858A1E1AB21375006E496D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64858A1F1AB21375006E496D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		64858A211AB21375006E496D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		64858A221AB21375006E496D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		64858A251AB21375006E496D /* Silverhound.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Silverhound.xcdatamodel; sourceTree = "<group>"; };
-		64858A271AB21375006E496D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		64858A281AB21375006E496D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		64858A251AB21375006E496D /* Silverhound.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; path = Silverhound.xcdatamodel; sourceTree = "<group>"; };
 		64858A2B1AB21375006E496D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64858A2D1AB21375006E496D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		64858A301AB21375006E496D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		64858A361AB21375006E496D /* SilverhoundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SilverhoundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64858A3B1AB21375006E496D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64858A3C1AB21375006E496D /* SilverhoundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SilverhoundTests.m; sourceTree = "<group>"; };
+		649986821AB215A900045F5A /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = Silverhound/Images.xcassets/AppIcon.appiconset/Contents.json; sourceTree = "<group>"; };
+		6499868C1AB2713200045F5A /* CoinTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinTableViewCell.h; sourceTree = "<group>"; };
+		6499868D1AB2713200045F5A /* CoinTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinTableViewCell.m; sourceTree = "<group>"; };
+		6499868E1AB2713200045F5A /* CoinTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoinTableViewCell.xib; sourceTree = "<group>"; };
+		649986941AB2749F00045F5A /* CoinTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoinTableViewController.h; path = ../CoinTableViewController.h; sourceTree = "<group>"; };
+		649986951AB2749F00045F5A /* CoinTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoinTableViewController.m; path = ../CoinTableViewController.m; sourceTree = "<group>"; };
+		649986971AB27D5200045F5A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		649ABFA41AB9F1E9001A35E2 /* silverhound.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = silverhound.sqlite; sourceTree = "<group>"; };
+		649ABFDB1ABA290E001A35E2 /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
+		649ABFDC1ABA290E001A35E2 /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
+		649ABFDE1ABA2BEF001A35E2 /* Silverhound 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Silverhound 2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				649986981AB27D5200045F5A /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,9 +85,12 @@
 		64858A111AB21375006E496D = {
 			isa = PBXGroup;
 			children = (
+				649986971AB27D5200045F5A /* CoreData.framework */,
+				649986821AB215A900045F5A /* Contents.json */,
 				64858A1C1AB21375006E496D /* Silverhound */,
 				64858A391AB21375006E496D /* SilverhoundTests */,
 				64858A1B1AB21375006E496D /* Products */,
+				64858A2F1AB21375006E496D /* LaunchScreen.xib */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,12 +108,16 @@
 			children = (
 				64858A211AB21375006E496D /* AppDelegate.h */,
 				64858A221AB21375006E496D /* AppDelegate.m */,
-				64858A271AB21375006E496D /* ViewController.h */,
-				64858A281AB21375006E496D /* ViewController.m */,
-				64858A2A1AB21375006E496D /* Main.storyboard */,
+				649986941AB2749F00045F5A /* CoinTableViewController.h */,
+				649986951AB2749F00045F5A /* CoinTableViewController.m */,
+				6499868C1AB2713200045F5A /* CoinTableViewCell.h */,
+				6499868D1AB2713200045F5A /* CoinTableViewCell.m */,
+				6499868E1AB2713200045F5A /* CoinTableViewCell.xib */,
 				64858A2D1AB21375006E496D /* Images.xcassets */,
-				64858A2F1AB21375006E496D /* LaunchScreen.xib */,
+				64858A2A1AB21375006E496D /* Main.storyboard */,
 				64858A241AB21375006E496D /* Silverhound.xcdatamodeld */,
+				649ABFDB1ABA290E001A35E2 /* Coin.h */,
+				649ABFDC1ABA290E001A35E2 /* Coin.m */,
 				64858A1D1AB21375006E496D /* Supporting Files */,
 			);
 			path = Silverhound;
@@ -99,6 +126,9 @@
 		64858A1D1AB21375006E496D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				649ABFA41AB9F1E9001A35E2 /* silverhound.sqlite */,
+				648352711AB9CC3A00F85818 /* Default.png */,
+				648352721AB9CC3A00F85818 /* icon.png */,
 				64858A1E1AB21375006E496D /* Info.plist */,
 				64858A1F1AB21375006E496D /* main.m */,
 			);
@@ -203,8 +233,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				64858A2C1AB21375006E496D /* Main.storyboard in Resources */,
+				648352741AB9CC3A00F85818 /* icon.png in Resources */,
+				648352731AB9CC3A00F85818 /* Default.png in Resources */,
 				64858A311AB21375006E496D /* LaunchScreen.xib in Resources */,
+				649986901AB2713200045F5A /* CoinTableViewCell.xib in Resources */,
+				649ABFA51AB9F1E9001A35E2 /* silverhound.sqlite in Resources */,
 				64858A2E1AB21375006E496D /* Images.xcassets in Resources */,
+				649986831AB215A900045F5A /* Contents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				64858A231AB21375006E496D /* AppDelegate.m in Sources */,
+				6499868F1AB2713200045F5A /* CoinTableViewCell.m in Sources */,
+				649ABFDD1ABA290E001A35E2 /* Coin.m in Sources */,
+				649986961AB2749F00045F5A /* CoinTableViewController.m in Sources */,
 				64858A201AB21375006E496D /* main.m in Sources */,
-				64858A291AB21375006E496D /* ViewController.m in Sources */,
 				64858A261AB21375006E496D /* Silverhound.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +299,7 @@
 				64858A301AB21375006E496D /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = Silverhound;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -416,6 +454,7 @@
 				64858A421AB21375006E496D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64858A431AB21375006E496D /* Build configuration list for PBXNativeTarget "SilverhoundTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +463,7 @@
 				64858A451AB21375006E496D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -431,6 +471,7 @@
 		64858A241AB21375006E496D /* Silverhound.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				649ABFDE1ABA2BEF001A35E2 /* Silverhound 2.xcdatamodel */,
 				64858A251AB21375006E496D /* Silverhound.xcdatamodel */,
 			);
 			currentVersion = 64858A251AB21375006E496D /* Silverhound.xcdatamodel */;

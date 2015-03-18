@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CoinTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//!!!
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObject *coin = [NSEntityDescription
+                                       insertNewObjectForEntityForName:@"Coin"
+                                       inManagedObjectContext:context];
+    [coin setValue:@"quarter" forKey:@"denomination"];
+    [coin setValue:@"United States" forKey:@"nation"];
+    [coin setValue:@"USA" forKey:@"country"];
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]); }
+//!!!
     // Override point for customization after application launch.
+    // pass down our managedObjectContext to our RecipeListTableViewController
+    
+    CoinTableViewController *coinTVC = (CoinTableViewController *)self.window.rootViewController;
+    coinTVC.managedObjectContext = self.managedObjectContext;
+
     return YES;
 }
 
@@ -43,7 +61,6 @@
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
-
 #pragma mark - Core Data stack
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -51,7 +68,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.devinney.Silverhound" in the application's documents directory.
+    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.devinney.CD_dummy" in the application's documents directory.
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
@@ -62,6 +79,8 @@
     }
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Silverhound" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    
     return _managedObjectModel;
 }
 
@@ -74,7 +93,7 @@
     // Create the coordinator and store
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Silverhound.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"silverhound"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {

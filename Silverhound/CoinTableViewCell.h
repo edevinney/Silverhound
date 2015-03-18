@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CoinTableViewCell.h
 //  Silverhound
 //
 //  Created by ejd on 3/12/15.
@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Coin.h"
 
-@interface ViewController : UIViewController
-
+@interface CoinTableViewCell : UITableViewCell
+@property (nonatomic, strong) Coin *coin;
 
 @end
-
