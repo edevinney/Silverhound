@@ -8,6 +8,7 @@
 
 #import "CoinTableViewController.h"
 #import "CoinTableViewCell.h"
+#import "CountryHeaderViewCell.h"
 
 @interface CoinTableViewController ()
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
@@ -65,13 +66,15 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     static NSString *CellIdentifier = @"Header";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    CountryHeaderViewCell *header = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     NSString *sectionTitle = [tableView.dataSource tableView:tableView titleForHeaderInSection:section];
-    cell.textLabel.text = sectionTitle;
-    return cell;
+//    header.cellContentView.
+    header.countryLabel.text = sectionTitle;
+    return header;
 
 }
+
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

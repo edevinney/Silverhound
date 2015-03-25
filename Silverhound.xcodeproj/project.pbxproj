@@ -19,10 +19,10 @@
 		64858A3D1AB21375006E496D /* SilverhoundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64858A3C1AB21375006E496D /* SilverhoundTests.m */; };
 		649986831AB215A900045F5A /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 649986821AB215A900045F5A /* Contents.json */; };
 		6499868F1AB2713200045F5A /* CoinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499868D1AB2713200045F5A /* CoinTableViewCell.m */; };
-		649986901AB2713200045F5A /* CoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6499868E1AB2713200045F5A /* CoinTableViewCell.xib */; };
 		649986961AB2749F00045F5A /* CoinTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 649986951AB2749F00045F5A /* CoinTableViewController.m */; };
 		649986981AB27D5200045F5A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 649986971AB27D5200045F5A /* CoreData.framework */; };
 		64B1AD5E1AC0F4A90087A656 /* ur-Silverhound.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 64B1AD5D1AC0F4A90087A656 /* ur-Silverhound.sqlite */; };
+		64C158961AC32D2E001BA1B1 /* CountryHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C158951AC32D2E001BA1B1 /* CountryHeaderViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +55,13 @@
 		649986821AB215A900045F5A /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = Silverhound/Images.xcassets/AppIcon.appiconset/Contents.json; sourceTree = "<group>"; };
 		6499868C1AB2713200045F5A /* CoinTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinTableViewCell.h; sourceTree = "<group>"; };
 		6499868D1AB2713200045F5A /* CoinTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinTableViewCell.m; sourceTree = "<group>"; };
-		6499868E1AB2713200045F5A /* CoinTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoinTableViewCell.xib; sourceTree = "<group>"; };
 		649986941AB2749F00045F5A /* CoinTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoinTableViewController.h; path = ../CoinTableViewController.h; sourceTree = "<group>"; };
 		649986951AB2749F00045F5A /* CoinTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoinTableViewController.m; path = ../CoinTableViewController.m; sourceTree = "<group>"; };
 		649986971AB27D5200045F5A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		649ABFDE1ABA2BEF001A35E2 /* Silverhound 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Silverhound 2.xcdatamodel"; sourceTree = "<group>"; };
 		64B1AD5D1AC0F4A90087A656 /* ur-Silverhound.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ur-Silverhound.sqlite"; sourceTree = "<group>"; };
+		64C158941AC32D2E001BA1B1 /* CountryHeaderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryHeaderViewCell.h; sourceTree = "<group>"; };
+		64C158951AC32D2E001BA1B1 /* CountryHeaderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryHeaderViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +115,8 @@
 				649986951AB2749F00045F5A /* CoinTableViewController.m */,
 				6499868C1AB2713200045F5A /* CoinTableViewCell.h */,
 				6499868D1AB2713200045F5A /* CoinTableViewCell.m */,
-				6499868E1AB2713200045F5A /* CoinTableViewCell.xib */,
+				64C158941AC32D2E001BA1B1 /* CountryHeaderViewCell.h */,
+				64C158951AC32D2E001BA1B1 /* CountryHeaderViewCell.m */,
 				64858A2A1AB21375006E496D /* Main.storyboard */,
 				64B1AD5D1AC0F4A90087A656 /* ur-Silverhound.sqlite */,
 				64858A241AB21375006E496D /* Silverhound.xcdatamodeld */,
@@ -237,7 +239,6 @@
 				64B1AD5E1AC0F4A90087A656 /* ur-Silverhound.sqlite in Resources */,
 				648352731AB9CC3A00F85818 /* Default.png in Resources */,
 				64858A311AB21375006E496D /* LaunchScreen.xib in Resources */,
-				649986901AB2713200045F5A /* CoinTableViewCell.xib in Resources */,
 				64858A2E1AB21375006E496D /* Images.xcassets in Resources */,
 				649986831AB215A900045F5A /* Contents.json in Resources */,
 			);
@@ -261,6 +262,7 @@
 				6499868F1AB2713200045F5A /* CoinTableViewCell.m in Sources */,
 				641AE17E1ABD0AF20003ADAA /* Coin.m in Sources */,
 				649986961AB2749F00045F5A /* CoinTableViewController.m in Sources */,
+				64C158961AC32D2E001BA1B1 /* CountryHeaderViewCell.m in Sources */,
 				64858A201AB21375006E496D /* main.m in Sources */,
 				64858A261AB21375006E496D /* Silverhound.xcdatamodeld in Sources */,
 			);
