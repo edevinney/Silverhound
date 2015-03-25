@@ -11,12 +11,18 @@
 
 @interface CoinTableViewCell : UITableViewCell {
     UILabel *denominationLabel;
-    UILabel *descriptionLabel;
+    UILabel *startYearLabel;
+    UILabel *endYearLabel;
+    UILabel *silverGramsLabel;
+    UILabel *scrapValueLabel;
     UILabel *synonymLabel;
 }
 @property (nonatomic, strong) Coin *coin;
 @property (nonatomic, retain) IBOutlet UILabel *denominationLabel;
-@property (nonatomic, retain) IBOutlet UILabel *descriptionLabel;
+@property (nonatomic, retain) IBOutlet UILabel *startYearLabel;
+@property (nonatomic, retain) IBOutlet UILabel *endYearLabel;
+@property (nonatomic, retain) IBOutlet UILabel *silverGramsLabel;
+@property (nonatomic, retain) IBOutlet UILabel *scrapValueLabel;
 @property (nonatomic, retain) IBOutlet UILabel *synonymLabel;
 
 @end

@@ -11,7 +11,10 @@
 @implementation CoinTableViewCell;
 
 @synthesize denominationLabel;
-@synthesize descriptionLabel;
+@synthesize startYearLabel;
+@synthesize endYearLabel;
+@synthesize silverGramsLabel;
+@synthesize scrapValueLabel;
 @synthesize synonymLabel;
 
 - (void)awakeFromNib {
@@ -22,7 +25,8 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
-    self.descriptionLabel.text = [self.coin.startYear stringValue];
+    self.startYearLabel.text = [self.coin.startYear stringValue];
+    self.endYearLabel.text = [self.coin.endYear stringValue];
     self.denominationLabel.text = self.coin.denomination;
     self.synonymLabel.text = self.coin.synonyms;
 }
