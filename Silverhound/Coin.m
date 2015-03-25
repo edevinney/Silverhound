@@ -2,7 +2,7 @@
 //  Coin.m
 //  Silverhound
 //
-//  Created by ejd on 3/18/15.
+//  Created by ejd on 3/20/15.
 //  Copyright (c) 2015 devinney. All rights reserved.
 //
 
@@ -13,19 +13,19 @@
 
 @dynamic country;
 @dynamic denomination;
-@dynamic diameterMM;
+@dynamic diameter_mm;
 @dynamic endYear;
-@dynamic fineWeightAgGrams;
-@dynamic massGrams;
+@dynamic fineweightAg_g;
+@dynamic fineweightAu_g;
+@dynamic mass_g;
+@dynamic nation;
+@dynamic notes;
 @dynamic obverseImage;
 @dynamic ordinal;
 @dynamic percentAg;
+@dynamic percentAu;
 @dynamic reverseImage;
 @dynamic startYear;
 @dynamic synonyms;
-@dynamic fineWeightAuGrams;
-@dynamic percentAu;
-@dynamic nation;
-@dynamic notes;
 
 @end

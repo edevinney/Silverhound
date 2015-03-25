@@ -3,17 +3,17 @@
     <entity name="Coin" representedClassName="Coin" syncable="YES">
         <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="denomination" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="diameterMM" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="diameter_mm" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="endYear" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="fineWeightAgGrams" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="fineWeightAuGrams" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="massGrams" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="fineweightAg_g" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="fineweightAu_g" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="mass_g" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="nation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="obverseImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="ordinal" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="percentAg" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="percentAu" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="percentAg" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="percentAu" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="reverseImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="startYear" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="synonyms" optional="YES" attributeType="String" syncable="YES"/>

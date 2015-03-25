@@ -8,7 +8,6 @@
 
 #import "CoinTableViewController.h"
 #import "CoinTableViewCell.h"
-#import "Coin.h"
 
 @interface CoinTableViewController ()
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
@@ -16,16 +15,16 @@
 
 @implementation CoinTableViewController
 
-@synthesize managedObjectContext;
+//@synthesize managedObjectContext;
 
 // segue ID when coin summary is tapped
 static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+        
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -34,7 +33,7 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
 //    self.tableView.rowHeight = 44.0;
     
     NSError *error = nil;
-/*
+
     if (![[self fetchedResultsController] performFetch:&error]) {
         //
         // Replace this implementation with code to handle the error appropriately.
@@ -46,7 +45,7 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
-*/
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,101 +54,77 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
 }
 
 #pragma mark - Table view data source
+#pragma mark - Table view data source methods
 
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-#pragma mark - UITableViewDataSource
-
+// The data source methods are handled primarily by the fetch results controller
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    NSInteger count = [self.fetchedResultsController sections].count;
-    
-    if (count == 0) {
-        count = 1;
-    }
-    
+        
+    NSInteger count = [[self.fetchedResultsController sections] count];
     return count;
 }
 
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    static NSString *CellIdentifier = @"Header";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    NSString *sectionTitle = [tableView.dataSource tableView:tableView titleForHeaderInSection:section];
+    cell.textLabel.text = sectionTitle;
+    return cell;
+
+}
+
+// Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    NSInteger numberOfRows = 0;
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    NSInteger numRows = [sectionInfo numberOfObjects];
+    return numRows;
+}
+
+// Customize the appearance of table view cells.
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
-    if ([self.fetchedResultsController sections].count > 0) {
-        id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-        numberOfRows = [sectionInfo numberOfObjects];
-    }
-    
-    return numberOfRows;
+    // Configure the cell
+    Coin *coin = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    CoinTableViewCell *ctvCell = (CoinTableViewCell *)cell;
+    ctvCell.coin = coin;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    // dequeue a RecipeTableViewCell, then set its recipe to the recipe for the current row
-    CoinTableViewCell *coinCell =
-    (CoinTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"MyIdentifier" forIndexPath:indexPath];
-    [self configureCell:coinCell atIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    return coinCell;
+    // Configure the cell.
+    [self configureCell:cell atIndexPath:indexPath];
+    return cell;
 }
 
-- (void)configureCell:(CoinTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    Coin *coin = (Coin *)[self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.coin = coin;
+    // Display the authors' names as section headings.
+    return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        // Delete the managed object.
+        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+        [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+        
+        NSError *error;
+        if (![context save:&error]) {
+            /*
+             Replace this implementation with code to handle the error appropriately.
+             
+             abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+             */
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+    }
 }
 
 
@@ -166,20 +141,20 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
         // Create the fetch request for the entity.
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         // Edit the entity name as appropriate.
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Coin" inManagedObjectContext:self.managedObjectContext];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Coin" inManagedObjectContext:_managedObjectContext];
         [fetchRequest setEntity:entity];
         
         // Edit the sort key as appropriate.
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-        NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+        NSSortDescriptor *sortCountryDescriptor = [[NSSortDescriptor alloc] initWithKey:@"country" ascending:YES];
+        NSSortDescriptor *sortOrdinalDescriptor = [[NSSortDescriptor alloc] initWithKey:@"ordinal" ascending:YES];
+        NSArray *sortDescriptors = @[sortCountryDescriptor,sortOrdinalDescriptor];
         
         [fetchRequest setSortDescriptors:sortDescriptors];
-        
-        // Edit the section name key path and cache name if appropriate.
-        // nil for section name key path means "no sections".
-        NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Root"];
-        aFetchedResultsController.delegate = self;
-        self.fetchedResultsController = aFetchedResultsController;
+                
+        // Create and initialize the fetch results controller.
+        _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"country" cacheName:@"Root"];
+        _fetchedResultsController.delegate = self;
+
     }
     
     return _fetchedResultsController;

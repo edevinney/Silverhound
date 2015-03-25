@@ -8,7 +8,11 @@
 
 #import "CoinTableViewCell.h"
 
-@implementation CoinTableViewCell
+@implementation CoinTableViewCell;
+
+@synthesize denominationLabel;
+@synthesize descriptionLabel;
+@synthesize synonymLabel;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -18,6 +22,9 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+    self.descriptionLabel.text = [self.coin.startYear stringValue];
+    self.denominationLabel.text = self.coin.denomination;
+    self.synonymLabel.text = self.coin.synonyms;
 }
 
 @end
