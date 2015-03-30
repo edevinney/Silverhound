@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface CoinTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface CoinTableViewController : UITableViewController <NSFetchedResultsControllerDelegate, UIPopoverControllerDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 

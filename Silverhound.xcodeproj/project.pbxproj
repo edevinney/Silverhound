@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6411D8971AC5982E0081A0EB /* CustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6411D88D1AC5982D0081A0EB /* CustomNavigationBar.m */; };
+		6411D8981AC5982E0081A0EB /* CustomNavigationBarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6411D88F1AC5982D0081A0EB /* CustomNavigationBarDetailViewController.m */; };
+		6411D8991AC5982E0081A0EB /* CustomNavigationBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6411D8911AC5982D0081A0EB /* CustomNavigationBarViewController.m */; };
+		6411D89A1AC5982E0081A0EB /* ExtendedNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6411D8941AC5982D0081A0EB /* ExtendedNavBarView.m */; };
+		6411D89B1AC5982E0081A0EB /* ExtendedNavBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6411D8961AC5982D0081A0EB /* ExtendedNavBarViewController.m */; };
 		641AE17E1ABD0AF20003ADAA /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = 641AE17D1ABD0AF20003ADAA /* Coin.m */; };
 		648352731AB9CC3A00F85818 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 648352711AB9CC3A00F85818 /* Default.png */; };
 		648352741AB9CC3A00F85818 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 648352721AB9CC3A00F85818 /* icon.png */; };
@@ -36,6 +41,7 @@
 		64C15C651AC3391F001BA1B1 /* us.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C15A761AC3391F001BA1B1 /* us.png */; };
 		64C15C791AC34AD8001BA1B1 /* de.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C15C781AC34AD8001BA1B1 /* de.png */; };
 		64C15C7B1AC34B52001BA1B1 /* gb.png in Resources */ = {isa = PBXBuildFile; fileRef = 64C15C7A1AC34B52001BA1B1 /* gb.png */; };
+		64C15C7E1AC3626F001BA1B1 /* CoinDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C15C7D1AC3626F001BA1B1 /* CoinDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6411D88C1AC5982D0081A0EB /* CustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationBar.h; sourceTree = "<group>"; };
+		6411D88D1AC5982D0081A0EB /* CustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationBar.m; sourceTree = "<group>"; };
+		6411D88E1AC5982D0081A0EB /* CustomNavigationBarDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationBarDetailViewController.h; sourceTree = "<group>"; };
+		6411D88F1AC5982D0081A0EB /* CustomNavigationBarDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationBarDetailViewController.m; sourceTree = "<group>"; };
+		6411D8901AC5982D0081A0EB /* CustomNavigationBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationBarViewController.h; sourceTree = "<group>"; };
+		6411D8911AC5982D0081A0EB /* CustomNavigationBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationBarViewController.m; sourceTree = "<group>"; };
+		6411D8931AC5982D0081A0EB /* ExtendedNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtendedNavBarView.h; sourceTree = "<group>"; };
+		6411D8941AC5982D0081A0EB /* ExtendedNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtendedNavBarView.m; sourceTree = "<group>"; };
+		6411D8951AC5982D0081A0EB /* ExtendedNavBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtendedNavBarViewController.h; sourceTree = "<group>"; };
+		6411D8961AC5982D0081A0EB /* ExtendedNavBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtendedNavBarViewController.m; sourceTree = "<group>"; };
 		641AE17C1ABD0AF20003ADAA /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
 		641AE17D1ABD0AF20003ADAA /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
 		648352711AB9CC3A00F85818 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -88,6 +104,8 @@
 		64C15A761AC3391F001BA1B1 /* us.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = us.png; sourceTree = "<group>"; };
 		64C15C781AC34AD8001BA1B1 /* de.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = de.png; sourceTree = "<group>"; };
 		64C15C7A1AC34B52001BA1B1 /* gb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gb.png; sourceTree = "<group>"; };
+		64C15C7C1AC3626F001BA1B1 /* CoinDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinDetailViewController.h; sourceTree = "<group>"; };
+		64C15C7D1AC3626F001BA1B1 /* CoinDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +127,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6411D88B1AC5982D0081A0EB /* CustomNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				6411D88C1AC5982D0081A0EB /* CustomNavigationBar.h */,
+				6411D88D1AC5982D0081A0EB /* CustomNavigationBar.m */,
+				6411D88E1AC5982D0081A0EB /* CustomNavigationBarDetailViewController.h */,
+				6411D88F1AC5982D0081A0EB /* CustomNavigationBarDetailViewController.m */,
+				6411D8901AC5982D0081A0EB /* CustomNavigationBarViewController.h */,
+				6411D8911AC5982D0081A0EB /* CustomNavigationBarViewController.m */,
+			);
+			path = CustomNavigationBar;
+			sourceTree = "<group>";
+		};
+		6411D8921AC5982D0081A0EB /* ExtendedNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				6411D8931AC5982D0081A0EB /* ExtendedNavBarView.h */,
+				6411D8941AC5982D0081A0EB /* ExtendedNavBarView.m */,
+				6411D8951AC5982D0081A0EB /* ExtendedNavBarViewController.h */,
+				6411D8961AC5982D0081A0EB /* ExtendedNavBarViewController.m */,
+			);
+			path = ExtendedNavBar;
+			sourceTree = "<group>";
+		};
 		64858A111AB21375006E496D = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +179,8 @@
 				64858A221AB21375006E496D /* AppDelegate.m */,
 				641AE17C1ABD0AF20003ADAA /* Coin.h */,
 				641AE17D1ABD0AF20003ADAA /* Coin.m */,
+				64C15C7C1AC3626F001BA1B1 /* CoinDetailViewController.h */,
+				64C15C7D1AC3626F001BA1B1 /* CoinDetailViewController.m */,
 				649986941AB2749F00045F5A /* CoinTableViewController.h */,
 				649986951AB2749F00045F5A /* CoinTableViewController.m */,
 				6499868C1AB2713200045F5A /* CoinTableViewCell.h */,
@@ -144,6 +188,8 @@
 				64C158941AC32D2E001BA1B1 /* CountryHeaderViewCell.h */,
 				64C158951AC32D2E001BA1B1 /* CountryHeaderViewCell.m */,
 				64858A2A1AB21375006E496D /* Main.storyboard */,
+				6411D88B1AC5982D0081A0EB /* CustomNavigationBar */,
+				6411D8921AC5982D0081A0EB /* ExtendedNavBar */,
 				64B1AD5D1AC0F4A90087A656 /* ur-Silverhound.sqlite */,
 				64858A241AB21375006E496D /* Silverhound.xcdatamodeld */,
 				64858A2D1AB21375006E496D /* Images.xcassets */,
@@ -326,8 +372,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64C15C7E1AC3626F001BA1B1 /* CoinDetailViewController.m in Sources */,
+				6411D89A1AC5982E0081A0EB /* ExtendedNavBarView.m in Sources */,
+				6411D8991AC5982E0081A0EB /* CustomNavigationBarViewController.m in Sources */,
+				6411D8971AC5982E0081A0EB /* CustomNavigationBar.m in Sources */,
 				64858A231AB21375006E496D /* AppDelegate.m in Sources */,
+				6411D89B1AC5982E0081A0EB /* ExtendedNavBarViewController.m in Sources */,
 				6499868F1AB2713200045F5A /* CoinTableViewCell.m in Sources */,
+				6411D8981AC5982E0081A0EB /* CustomNavigationBarDetailViewController.m in Sources */,
 				641AE17E1ABD0AF20003ADAA /* Coin.m in Sources */,
 				649986961AB2749F00045F5A /* CoinTableViewController.m in Sources */,
 				64C158961AC32D2E001BA1B1 /* CountryHeaderViewCell.m in Sources */,

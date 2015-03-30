@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 devinney. All rights reserved.
 //
 
+#import "AppDelegate.h"
+
 #import "CoinTableViewController.h"
 #import "CoinTableViewCell.h"
 #import "CountryHeaderViewCell.h"
@@ -46,7 +48,8 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
-
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.CTVController = self;
 }
 
 - (void)didReceiveMemoryWarning {
