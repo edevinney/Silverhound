@@ -23,6 +23,7 @@
 		647E90FA1ACAEA06008D975B /* Russia.png in Resources */ = {isa = PBXBuildFile; fileRef = 647E90ED1ACAEA06008D975B /* Russia.png */; };
 		647E90FB1ACAEA06008D975B /* United States.png in Resources */ = {isa = PBXBuildFile; fileRef = 647E90EE1ACAEA06008D975B /* United States.png */; };
 		647E90FD1ACAEAE9008D975B /* Switzerland.png in Resources */ = {isa = PBXBuildFile; fileRef = 647E90FC1ACAEAE9008D975B /* Switzerland.png */; };
+		647E91001ACAF4C3008D975B /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 647E90FF1ACAF4C3008D975B /* SplashView.m */; };
 		648352731AB9CC3A00F85818 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 648352711AB9CC3A00F85818 /* Default.png */; };
 		648352741AB9CC3A00F85818 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 648352721AB9CC3A00F85818 /* icon.png */; };
 		64858A201AB21375006E496D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64858A1F1AB21375006E496D /* main.m */; };
@@ -70,6 +71,8 @@
 		647E90ED1ACAEA06008D975B /* Russia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Russia.png; sourceTree = "<group>"; };
 		647E90EE1ACAEA06008D975B /* United States.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "United States.png"; sourceTree = "<group>"; };
 		647E90FC1ACAEAE9008D975B /* Switzerland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Switzerland.png; sourceTree = "<group>"; };
+		647E90FE1ACAF4C3008D975B /* SplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashView.h; sourceTree = "<group>"; };
+		647E90FF1ACAF4C3008D975B /* SplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashView.m; sourceTree = "<group>"; };
 		648352711AB9CC3A00F85818 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		648352721AB9CC3A00F85818 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		64858A1A1AB21375006E496D /* Silverhound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Silverhound.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +153,8 @@
 		64858A1C1AB21375006E496D /* Silverhound */ = {
 			isa = PBXGroup;
 			children = (
+				647E90FE1ACAF4C3008D975B /* SplashView.h */,
+				647E90FF1ACAF4C3008D975B /* SplashView.m */,
 				64858A211AB21375006E496D /* AppDelegate.h */,
 				64858A221AB21375006E496D /* AppDelegate.m */,
 				641AE17C1ABD0AF20003ADAA /* Coin.h */,
@@ -353,6 +358,7 @@
 				64858A231AB21375006E496D /* AppDelegate.m in Sources */,
 				6499868F1AB2713200045F5A /* CoinTableViewCell.m in Sources */,
 				641AE17E1ABD0AF20003ADAA /* Coin.m in Sources */,
+				647E91001ACAF4C3008D975B /* SplashView.m in Sources */,
 				649986961AB2749F00045F5A /* CoinTableViewController.m in Sources */,
 				64C158961AC32D2E001BA1B1 /* CountryHeaderViewCell.m in Sources */,
 				64858A201AB21375006E496D /* main.m in Sources */,

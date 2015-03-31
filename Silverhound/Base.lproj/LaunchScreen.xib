@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D113c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -10,10 +10,21 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="hUk-DJ-tpg">
+                    <rect key="frame" x="106" y="99" width="272" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="272" id="BKu-nt-Ixq"/>
+                        <constraint firstAttribute="height" constant="60" id="XeE-1w-G2U"/>
+                    </constraints>
+                </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
-                    <rect key="frame" x="106" y="437" width="269" height="21"/>
+                    <rect key="frame" x="31" y="436" width="348" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="348" id="NHx-5d-tAN"/>
+                        <constraint firstAttribute="height" constant="21" id="swY-Au-8FP"/>
+                    </constraints>
                     <attributedString key="attributedText">
-                        <fragment content="  Copyright (c) 2015 Ed Devinney. All rights reserved.">
+                        <fragment content="  Copyright © 2015 Ed Devinney. All rights reserved.">
                             <attributes>
                                 <color key="NSColor" white="0.82750851754789001" alpha="1" colorSpace="calibratedWhite"/>
                                 <font key="NSFont" size="12" name="HelveticaNeue"/>
@@ -23,17 +34,15 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="hUk-DJ-tpg">
-                    <rect key="frame" x="106" y="179" width="272" height="60"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
-                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
-                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
-                <constraint firstAttribute="centerY" secondItem="hUk-DJ-tpg" secondAttribute="centerY" id="ZJ6-kM-v15"/>
-                <constraint firstAttribute="centerX" secondItem="hUk-DJ-tpg" secondAttribute="centerX" id="ril-Cv-Ub6"/>
+                <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="X9K-T8-fde"/>
+                <constraint firstItem="hUk-DJ-tpg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="106" id="frl-It-hRl"/>
+                <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="31" id="iU0-4T-suY"/>
+                <constraint firstItem="hUk-DJ-tpg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="99" id="sWr-FU-jKO"/>
+                <constraint firstAttribute="centerX" secondItem="hUk-DJ-tpg" secondAttribute="centerX" id="tlO-eN-cm5"/>
+                <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="23" id="ujM-kQ-aKe"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

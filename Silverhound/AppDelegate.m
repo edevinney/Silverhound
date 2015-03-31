@@ -168,7 +168,7 @@ NSString *kLastSilverQuoteSetting = @"lastSilverQuote";
         NSLog(@"error is %@", [error localizedDescription]);
         
         UIAlertView *cantContactServer = [[UIAlertView alloc] initWithTitle:@"Network Error" message:@"Can't update spot price - using last saved value. Please check your device's network settings." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        
+
         [cantContactServer show];
         
         return;
@@ -181,7 +181,6 @@ NSString *kLastSilverQuoteSetting = @"lastSilverQuote";
         [self savePreferences];
         
     }
-
 }
 -(void)getAsyncSilverQuote
 {

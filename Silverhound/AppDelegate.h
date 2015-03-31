@@ -13,6 +13,8 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, NSURLConnectionDataDelegate, NSXMLParserDelegate>
 
+@property (strong, nonatomic) IBOutlet UIView *splashView;
+
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) NSData *silverQuoteData;
