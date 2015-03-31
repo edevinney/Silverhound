@@ -22,12 +22,13 @@
 {
 }
 
+
 @synthesize navItem;
 
 // segue ID when coin summary is tapped
 static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
 
-- (void) updateQuotePrompt {
+- (void) updateQuoteTitle {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     NSNumberFormatter *oneShotNumberFormatter = [[NSNumberFormatter alloc] init];
@@ -44,14 +45,14 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
     [oneShotDateFormatter setDateFormat:@"dd MMM yyyy"];
     
     
-    self.navItem.prompt = [NSString stringWithFormat:@"Silver %@/oz on %@",quoteString,[oneShotDateFormatter stringFromDate: appDelegate.lastSilverQuoteDate]];
+    self.navItem.title = [NSString stringWithFormat:@"Silver %@/oz on %@",quoteString,[oneShotDateFormatter stringFromDate: appDelegate.lastSilverQuoteDate]];
 }
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
         
-    [self updateQuotePrompt];
+    [self updateQuoteTitle];
     
     
     NSError *error = nil;
@@ -69,6 +70,7 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
     }
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     appDelegate.CTVController = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -111,6 +113,9 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
 }
 
 // Customize the appearance of table view cells.
+-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
     // Configure the cell

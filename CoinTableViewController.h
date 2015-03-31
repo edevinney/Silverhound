@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface CoinTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface CoinTableViewController : UITableViewController <NSFetchedResultsControllerDelegate, UITableViewDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navItem;

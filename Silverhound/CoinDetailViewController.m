@@ -27,7 +27,7 @@
     /*
      * spin/flip
      */
-    
+/*
     CGRect frame = CGRectMake(frontView.frame.origin.x, frontView.frame.origin.y, CGRectGetWidth(frontView.frame), CGRectGetHeight(frontView.frame));
     [frontView setHidden:FALSE];
     //	[frontView setFrameOrigin:CGPointMake(0, 0)];
@@ -49,6 +49,7 @@
     
     self.view.layer.sublayerTransform = perspectiveTransform;
     [self didChangeValueForKey:@"distortion"];
+*/
 }
 
 - (void)didReceiveMemoryWarning {
