@@ -35,12 +35,23 @@
 - (void) updateQuoteTitle {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
+    NSNumberFormatter *oneShotNumberFormatter = [[NSNumberFormatter alloc] init];
+    [oneShotNumberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    oneShotNumberFormatter.currencyCode = @"USD";
+    NSString *groupingSeparator = [[NSLocale currentLocale] objectForKey:NSLocaleGroupingSeparator];
+    [oneShotNumberFormatter setGroupingSeparator:groupingSeparator];
+    [oneShotNumberFormatter setGroupingSize:3];
+    [oneShotNumberFormatter setAlwaysShowsDecimalSeparator:NO];
+    [oneShotNumberFormatter setUsesGroupingSeparator:YES];
+    NSString *quoteString = [oneShotNumberFormatter stringFromNumber:[NSNumber numberWithFloat:appDelegate.lastSilverQuote]];
+
+    
+    self.topItem.title = [NSString stringWithFormat:@"Spot Silver: %@/oz t", quoteString];
+    
     NSDateFormatter *oneShotDateFormatter = [[NSDateFormatter alloc]init];
-    [oneShotDateFormatter setDateFormat:@"MMM dd, ''YY"];
+    [oneShotDateFormatter setDateFormat:@"dd MMM yyyy"];
     
-    
-    NSString *scrapQuote = [NSString stringWithFormat:@"Silver spot: $%.2f on %@",appDelegate.lastSilverQuote, [oneShotDateFormatter stringFromDate: appDelegate.lastSilverQuoteDate]];
-    self.topItem.title = scrapQuote;
+    self.topItem.prompt = [NSString stringWithFormat:@"Last Packetizer quote: %@",[oneShotDateFormatter stringFromDate: appDelegate.lastSilverQuoteDate]];
     
     appDelegate.customNavBar = self;
 }

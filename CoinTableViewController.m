@@ -38,7 +38,7 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
     NSError *error = nil;
 
     if (![[self fetchedResultsController] performFetch:&error]) {
-        //
+        // !!!!
         // Replace this implementation with code to handle the error appropriately.
         //
         // abort() causes the application to generate a crash log and terminate. You should not use this 
@@ -72,10 +72,14 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
     CountryHeaderViewCell *header = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     NSString *sectionTitle = [tableView.dataSource tableView:tableView titleForHeaderInSection:section];
-//    header.cellContentView.
     header.countryLabel.text = sectionTitle;
-    return header;
+    
+ //   Coin *coin = [self.fetchedResultsController objectAtIndexPath:section];
 
+    UIImage *image = [UIImage imageNamed: [NSString stringWithFormat:@"%@.png", sectionTitle]];
+    header.flagImageView.image = image;
+    
+    return header;
 }
 
 
@@ -108,7 +112,9 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    // Display the authors' names as section headings.
+    // Display the country names as section headings.
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+
     return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
 }
 

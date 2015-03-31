@@ -7,6 +7,7 @@
 //
 
 #import "CoinTableViewCell.h"
+#import "AppDelegate.h"
 
 @implementation CoinTableViewCell;
 
@@ -29,6 +30,23 @@
     self.endYearLabel.text = [self.coin.endYear stringValue];
     self.denominationLabel.text = self.coin.denomination;
     self.synonymLabel.text = self.coin.synonyms;
+    self.silverGramsLabel.text = [NSString stringWithFormat:@"%.3f", [self.coin.fineweightAg_g floatValue]];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+
+    float scrapValue = [self.coin.fineweightAg_g floatValue] * (appDelegate.lastSilverQuote /31.1034768);
+    
+    NSNumberFormatter *oneShotNumberFormatter = [[NSNumberFormatter alloc] init];
+    [oneShotNumberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    oneShotNumberFormatter.currencyCode = @"USD";
+    NSString *groupingSeparator = [[NSLocale currentLocale] objectForKey:NSLocaleGroupingSeparator];
+    [oneShotNumberFormatter setGroupingSeparator:groupingSeparator];
+    [oneShotNumberFormatter setGroupingSize:3];
+    [oneShotNumberFormatter setAlwaysShowsDecimalSeparator:NO];
+    [oneShotNumberFormatter setUsesGroupingSeparator:YES];
+    NSString *scrapValueString = [oneShotNumberFormatter stringFromNumber:[NSNumber numberWithFloat:scrapValue]];
+
+    self.scrapValueLabel.text = scrapValueString;
 }
 
 @end

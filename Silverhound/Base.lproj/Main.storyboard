@@ -10,12 +10,9 @@
         <scene sceneID="mGx-9P-Yyg">
             <objects>
                 <navigationController id="khz-42-bmo" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="9gn-YX-Twv" customClass="CustomNavigationBar">
+                    <navigationBar key="navigationBar" contentMode="center" barStyle="black" translucent="NO" id="9gn-YX-Twv" customClass="CustomNavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="mf5-yW-o8b" kind="relationship" relationship="rootViewController" id="oeB-i6-dKN"/>
@@ -43,7 +40,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ie.png" translatesAutoresizingMaskIntoConstraints="NO" id="rRn-Rc-fn2">
-                                            <rect key="frame" x="8" y="7" width="30" height="20"/>
+                                            <rect key="frame" x="8" y="11" width="23" height="15"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0N9-7b-xUz">
                                             <rect key="frame" x="46" y="9" width="187" height="17"/>
@@ -241,7 +238,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGx-bq-gHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799" y="387"/>
+            <point key="canvasLocation" x="799" y="386"/>
         </scene>
         <!--Coin Detail View Controller-->
         <scene sceneID="nfa-jK-IxG">

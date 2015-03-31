@@ -16,7 +16,6 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) NSData *silverQuoteData;
-@property (nonatomic) float silverQuote;
 
 @property (strong, nonatomic) NSDate *lastSilverQuoteDate;
 @property (nonatomic) float lastSilverQuote;
