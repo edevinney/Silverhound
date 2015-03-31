@@ -6,11 +6,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--All Coins-->
         <scene sceneID="mGx-9P-Yyg">
             <objects>
-                <navigationController id="khz-42-bmo" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="center" barStyle="black" translucent="NO" id="9gn-YX-Twv" customClass="CustomNavigationBar">
+                <navigationController title="All Coins" id="khz-42-bmo" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="center" barStyle="black" translucent="NO" id="9gn-YX-Twv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -22,12 +22,12 @@
             </objects>
             <point key="canvasLocation" x="48" y="1034"/>
         </scene>
-        <!--Coin Table View Controller-->
+        <!--Silver Coins-->
         <scene sceneID="pQv-3A-c9v">
             <objects>
-                <tableViewController storyboardIdentifier="CTVController" hidesBottomBarWhenPushed="YES" id="mf5-yW-o8b" customClass="CoinTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="70" sectionHeaderHeight="34" sectionFooterHeight="22" id="oZT-H2-y3v">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                <tableViewController storyboardIdentifier="CTVController" title="Silver Coins2" hidesBottomBarWhenPushed="YES" id="mf5-yW-o8b" userLabel="Silver Coins" customClass="CoinTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oZT-H2-y3v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="506"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,10 +40,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ie.png" translatesAutoresizingMaskIntoConstraints="NO" id="rRn-Rc-fn2">
-                                            <rect key="frame" x="8" y="11" width="23" height="15"/>
+                                            <rect key="frame" x="8" y="4" width="23" height="15"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0N9-7b-xUz">
-                                            <rect key="frame" x="46" y="9" width="187" height="17"/>
+                                            <rect key="frame" x="46" y="2" width="187" height="17"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="country">
                                                     <attributes>
@@ -234,9 +234,13 @@
                             <outlet property="delegate" destination="mf5-yW-o8b" id="jJW-2a-qL2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ydM-6U-hko"/>
+                    <navigationItem key="navigationItem" title="All Coins" prompt="." id="ydM-6U-hko"/>
+                    <connections>
+                        <outlet property="navItem" destination="ydM-6U-hko" id="fZa-MA-VNq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGx-bq-gHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fRe-tc-lBi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="799" y="386"/>
         </scene>
@@ -251,12 +255,25 @@
                     <view key="view" contentMode="scaleToFill" id="7lr-AR-KRT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCm-7k-Me2">
+                                <rect key="frame" x="16" y="0.0" width="35" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fRe-tc-lBi" kind="unwind" unwindAction="unwindToTableView:" id="8Wj-hW-Gx1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rhJ-tf-eLD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1755" y="351"/>
+            <point key="canvasLocation" x="1991" y="391"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SN5-hg-mRs">
@@ -279,6 +296,6 @@
     </scenes>
     <resources>
         <image name="Default.png" width="306" height="91"/>
-        <image name="ie.png" width="16" height="11"/>
+        <image name="ie.png" width="306" height="91"/>
     </resources>
 </document>

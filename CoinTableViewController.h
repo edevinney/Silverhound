@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface CoinTableViewController : UITableViewController <NSFetchedResultsControllerDelegate, UIPopoverControllerDelegate>
+@interface CoinTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
 
 @end

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6411D8971AC5982E0081A0EB /* CustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6411D88D1AC5982D0081A0EB /* CustomNavigationBar.m */; };
 		641AE17E1ABD0AF20003ADAA /* Coin.m in Sources */ = {isa = PBXBuildFile; fileRef = 641AE17D1ABD0AF20003ADAA /* Coin.m */; };
 		647E90EF1ACAEA06008D975B /* United Kingdom.png in Resources */ = {isa = PBXBuildFile; fileRef = 647E90E21ACAEA06008D975B /* United Kingdom.png */; };
 		647E90F01ACAEA06008D975B /* Austria.png in Resources */ = {isa = PBXBuildFile; fileRef = 647E90E31ACAEA06008D975B /* Austria.png */; };
@@ -23,7 +22,6 @@
 		647E90FA1ACAEA06008D975B /* Russia.png in Resources */ = {isa = PBXBuildFile; fileRef = 647E90ED1ACAEA06008D975B /* Russia.png */; };
 		647E90FB1ACAEA06008D975B /* United States.png in Resources */ = {isa = PBXBuildFile; fileRef = 647E90EE1ACAEA06008D975B /* United States.png */; };
 		647E90FD1ACAEAE9008D975B /* Switzerland.png in Resources */ = {isa = PBXBuildFile; fileRef = 647E90FC1ACAEAE9008D975B /* Switzerland.png */; };
-		647E91001ACAF4C3008D975B /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 647E90FF1ACAF4C3008D975B /* SplashView.m */; };
 		648352731AB9CC3A00F85818 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 648352711AB9CC3A00F85818 /* Default.png */; };
 		648352741AB9CC3A00F85818 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 648352721AB9CC3A00F85818 /* icon.png */; };
 		64858A201AB21375006E496D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64858A1F1AB21375006E496D /* main.m */; };
@@ -53,8 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6411D88C1AC5982D0081A0EB /* CustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationBar.h; sourceTree = "<group>"; };
-		6411D88D1AC5982D0081A0EB /* CustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationBar.m; sourceTree = "<group>"; };
 		641AE17C1ABD0AF20003ADAA /* Coin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coin.h; sourceTree = "<group>"; };
 		641AE17D1ABD0AF20003ADAA /* Coin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coin.m; sourceTree = "<group>"; };
 		647E90E21ACAEA06008D975B /* United Kingdom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "United Kingdom.png"; sourceTree = "<group>"; };
@@ -71,8 +67,6 @@
 		647E90ED1ACAEA06008D975B /* Russia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Russia.png; sourceTree = "<group>"; };
 		647E90EE1ACAEA06008D975B /* United States.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "United States.png"; sourceTree = "<group>"; };
 		647E90FC1ACAEAE9008D975B /* Switzerland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Switzerland.png; sourceTree = "<group>"; };
-		647E90FE1ACAF4C3008D975B /* SplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashView.h; sourceTree = "<group>"; };
-		647E90FF1ACAF4C3008D975B /* SplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashView.m; sourceTree = "<group>"; };
 		648352711AB9CC3A00F85818 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		648352721AB9CC3A00F85818 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		64858A1A1AB21375006E496D /* Silverhound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Silverhound.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,15 +114,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6411D88B1AC5982D0081A0EB /* CustomNavigationBar */ = {
-			isa = PBXGroup;
-			children = (
-				6411D88C1AC5982D0081A0EB /* CustomNavigationBar.h */,
-				6411D88D1AC5982D0081A0EB /* CustomNavigationBar.m */,
-			);
-			path = CustomNavigationBar;
-			sourceTree = "<group>";
-		};
 		64858A111AB21375006E496D = {
 			isa = PBXGroup;
 			children = (
@@ -153,8 +138,6 @@
 		64858A1C1AB21375006E496D /* Silverhound */ = {
 			isa = PBXGroup;
 			children = (
-				647E90FE1ACAF4C3008D975B /* SplashView.h */,
-				647E90FF1ACAF4C3008D975B /* SplashView.m */,
 				64858A211AB21375006E496D /* AppDelegate.h */,
 				64858A221AB21375006E496D /* AppDelegate.m */,
 				641AE17C1ABD0AF20003ADAA /* Coin.h */,
@@ -168,7 +151,6 @@
 				64C158941AC32D2E001BA1B1 /* CountryHeaderViewCell.h */,
 				64C158951AC32D2E001BA1B1 /* CountryHeaderViewCell.m */,
 				64858A2A1AB21375006E496D /* Main.storyboard */,
-				6411D88B1AC5982D0081A0EB /* CustomNavigationBar */,
 				64B1AD5D1AC0F4A90087A656 /* ur-Silverhound.sqlite */,
 				64858A241AB21375006E496D /* Silverhound.xcdatamodeld */,
 				64858A2D1AB21375006E496D /* Images.xcassets */,
@@ -354,11 +336,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				64C15C7E1AC3626F001BA1B1 /* CoinDetailViewController.m in Sources */,
-				6411D8971AC5982E0081A0EB /* CustomNavigationBar.m in Sources */,
 				64858A231AB21375006E496D /* AppDelegate.m in Sources */,
 				6499868F1AB2713200045F5A /* CoinTableViewCell.m in Sources */,
 				641AE17E1ABD0AF20003ADAA /* Coin.m in Sources */,
-				647E91001ACAF4C3008D975B /* SplashView.m in Sources */,
 				649986961AB2749F00045F5A /* CoinTableViewController.m in Sources */,
 				64C158961AC32D2E001BA1B1 /* CountryHeaderViewCell.m in Sources */,
 				64858A201AB21375006E496D /* main.m in Sources */,

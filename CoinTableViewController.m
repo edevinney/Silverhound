@@ -18,22 +18,41 @@
 
 @implementation CoinTableViewController
 
-//@synthesize managedObjectContext;
+- (IBAction)unwindToTableView:(UIStoryboardSegue *)unwindSegue
+{
+}
+
+@synthesize navItem;
 
 // segue ID when coin summary is tapped
 static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
 
+- (void) updateQuotePrompt {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    NSNumberFormatter *oneShotNumberFormatter = [[NSNumberFormatter alloc] init];
+    [oneShotNumberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    oneShotNumberFormatter.currencyCode = @"USD";
+    NSString *groupingSeparator = [[NSLocale currentLocale] objectForKey:NSLocaleGroupingSeparator];
+    [oneShotNumberFormatter setGroupingSeparator:groupingSeparator];
+    [oneShotNumberFormatter setGroupingSize:3];
+    [oneShotNumberFormatter setAlwaysShowsDecimalSeparator:NO];
+    [oneShotNumberFormatter setUsesGroupingSeparator:YES];
+    NSString *quoteString = [oneShotNumberFormatter stringFromNumber:[NSNumber numberWithFloat:appDelegate.lastSilverQuote]];
+    
+    NSDateFormatter *oneShotDateFormatter = [[NSDateFormatter alloc]init];
+    [oneShotDateFormatter setDateFormat:@"dd MMM yyyy"];
+    
+    
+    self.navItem.prompt = [NSString stringWithFormat:@"Silver %@/oz on %@",quoteString,[oneShotDateFormatter stringFromDate: appDelegate.lastSilverQuoteDate]];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
         
-    // Uncomment the following line to preserve selection between presentations.
-    self.clearsSelectionOnViewWillAppear = NO;
+    [self updateQuotePrompt];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    // Set the table view's row height
-//    self.tableView.rowHeight = 44.0;
     
     NSError *error = nil;
 

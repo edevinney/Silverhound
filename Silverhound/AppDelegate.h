@@ -8,12 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "CustomNavigationBar.h"
 #import "CoinTableViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, NSURLConnectionDataDelegate, NSXMLParserDelegate>
-
-@property (strong, nonatomic) IBOutlet UIView *splashView;
 
 @property (strong, nonatomic) UIWindow *window;
 
@@ -22,7 +19,6 @@
 @property (strong, nonatomic) NSDate *lastSilverQuoteDate;
 @property (nonatomic) float lastSilverQuote;
 
-@property (strong, nonatomic)CustomNavigationBar *customNavBar;
 @property (strong, nonatomic)CoinTableViewController *CTVController;
 
 - (void)saveContext;

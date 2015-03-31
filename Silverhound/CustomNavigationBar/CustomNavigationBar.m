@@ -78,6 +78,14 @@
     self.customButton.frame = CGRectMake(0, 0, self.bounds.size.width, buttonSize.height);
 }
 
+-(void)pushNavigationItem:(UINavigationItem *)item animated:(BOOL)animated {
+    
+}
+
+-(UINavigationItem *) popNavigationItemAnimated:(BOOL)animated {
+    return self.topItem;
+}
+
 
 //| ----------------------------------------------------------------------------
 //  Custom implementation of the setter for the customButton property.
