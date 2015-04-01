@@ -47,6 +47,12 @@
     NSString *scrapValueString = [oneShotNumberFormatter stringFromNumber:[NSNumber numberWithFloat:scrapValue]];
 
     self.scrapValueLabel.text = scrapValueString;
+    
+    self.accessoryType = UITableViewCellAccessoryNone;
+    if ([self.denominationLabel.text isEqualToString:@"Thaler"]) {
+        self.accessoryType = UITableViewCellAccessoryDetailButton;
+        
+    }
 }
 
 @end
