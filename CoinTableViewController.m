@@ -45,7 +45,7 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
     [oneShotDateFormatter setDateFormat:@"dd MMM yyyy"];
     
     
-    self.navItem.title = [NSString stringWithFormat:@"Silver %@/oz on %@",quoteString,[oneShotDateFormatter stringFromDate: appDelegate.lastSilverQuoteDate]];
+    self.navItem.title = [NSString stringWithFormat:@"Silver: %@/oz on %@",quoteString,[oneShotDateFormatter stringFromDate: appDelegate.lastSilverQuoteDate]];
 }
 
 

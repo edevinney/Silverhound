@@ -22,6 +22,8 @@
 		647E90FA1ACAEA06008D975B /* Russia.png in Resources */ = {isa = PBXBuildFile; fileRef = 647E90ED1ACAEA06008D975B /* Russia.png */; };
 		647E90FB1ACAEA06008D975B /* United States.png in Resources */ = {isa = PBXBuildFile; fileRef = 647E90EE1ACAEA06008D975B /* United States.png */; };
 		647E90FD1ACAEAE9008D975B /* Switzerland.png in Resources */ = {isa = PBXBuildFile; fileRef = 647E90FC1ACAEAE9008D975B /* Switzerland.png */; };
+		647E91031ACB3C42008D975B /* FR50FHerculeO.png in Resources */ = {isa = PBXBuildFile; fileRef = 647E91011ACB3C42008D975B /* FR50FHerculeO.png */; };
+		647E91041ACB3C42008D975B /* FR50FHerculeR.png in Resources */ = {isa = PBXBuildFile; fileRef = 647E91021ACB3C42008D975B /* FR50FHerculeR.png */; };
 		648352731AB9CC3A00F85818 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 648352711AB9CC3A00F85818 /* Default.png */; };
 		648352741AB9CC3A00F85818 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 648352721AB9CC3A00F85818 /* icon.png */; };
 		64858A201AB21375006E496D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64858A1F1AB21375006E496D /* main.m */; };
@@ -67,6 +69,8 @@
 		647E90ED1ACAEA06008D975B /* Russia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Russia.png; sourceTree = "<group>"; };
 		647E90EE1ACAEA06008D975B /* United States.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "United States.png"; sourceTree = "<group>"; };
 		647E90FC1ACAEAE9008D975B /* Switzerland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Switzerland.png; sourceTree = "<group>"; };
+		647E91011ACB3C42008D975B /* FR50FHerculeO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FR50FHerculeO.png; sourceTree = "<group>"; };
+		647E91021ACB3C42008D975B /* FR50FHerculeR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FR50FHerculeR.png; sourceTree = "<group>"; };
 		648352711AB9CC3A00F85818 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		648352721AB9CC3A00F85818 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		64858A1A1AB21375006E496D /* Silverhound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Silverhound.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +166,8 @@
 		64858A1D1AB21375006E496D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				647E91011ACB3C42008D975B /* FR50FHerculeO.png */,
+				647E91021ACB3C42008D975B /* FR50FHerculeR.png */,
 				64C158971AC3391E001BA1B1 /* famfamfam_flag_icons */,
 				648352711AB9CC3A00F85818 /* Default.png */,
 				648352721AB9CC3A00F85818 /* icon.png */,
@@ -315,9 +321,11 @@
 				64858A311AB21375006E496D /* LaunchScreen.xib in Resources */,
 				64858A2E1AB21375006E496D /* Images.xcassets in Resources */,
 				647E90F61ACAEA06008D975B /* Ireland.png in Resources */,
+				647E91031ACB3C42008D975B /* FR50FHerculeO.png in Resources */,
 				649986831AB215A900045F5A /* Contents.json in Resources */,
 				647E90FD1ACAEAE9008D975B /* Switzerland.png in Resources */,
 				647E90EF1ACAEA06008D975B /* United Kingdom.png in Resources */,
+				647E91041ACB3C42008D975B /* FR50FHerculeR.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +410,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: E Devinney (5Z3M2257VQ)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -443,6 +452,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: E Devinney (5Z3M2257VQ)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;

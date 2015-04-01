@@ -12,11 +12,9 @@
 @implementation CoinTableViewCell;
 
 @synthesize denominationLabel;
-@synthesize startYearLabel;
-@synthesize endYearLabel;
-@synthesize silverGramsLabel;
+@synthesize descriptionLabel;
+@synthesize yearLabel;
 @synthesize scrapValueLabel;
-@synthesize synonymLabel;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -25,12 +23,14 @@
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
-    self.startYearLabel.text = [self.coin.startYear stringValue];
-    self.endYearLabel.text = [self.coin.endYear stringValue];
+    // Configure the cell for each coin. These compound strings need i18n help.
     self.denominationLabel.text = self.coin.denomination;
-    self.synonymLabel.text = self.coin.synonyms;
-    self.silverGramsLabel.text = [NSString stringWithFormat:@"%.3f", [self.coin.fineweightAg_g floatValue]];
+    self.yearLabel.text = [NSString stringWithFormat:@"%@ - %@",[self.coin.startYear stringValue], [self.coin.endYear stringValue]];
+
+    self.descriptionLabel.text = [NSString stringWithFormat:@"%.3fg total, %.3f fine",
+                                  [self.coin.mass_g floatValue],
+                                  [self.coin.percentAg floatValue]
+                           ];
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 
