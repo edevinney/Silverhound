@@ -7,6 +7,7 @@
 //
 
 #import "CoinTableViewCell.h"
+#import "CoinDetailViewController.h"
 #import "AppDelegate.h"
 
 @implementation CoinTableViewCell;
@@ -15,6 +16,13 @@
 @synthesize descriptionLabel;
 @synthesize yearLabel;
 @synthesize scrapValueLabel;
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([[segue identifier] isEqualToString:@"showCoinDetail1"]){
+        CoinDetailViewController *cdvc = (CoinDetailViewController *)[segue destinationViewController];
+    }
+}
+
 
 - (void)awakeFromNib {
     // Initialization code
@@ -46,12 +54,14 @@
     [oneShotNumberFormatter setUsesGroupingSeparator:YES];
     NSString *scrapValueString = [oneShotNumberFormatter stringFromNumber:[NSNumber numberWithFloat:scrapValue]];
 
-    self.scrapValueLabel.text = scrapValueString;
-    
     self.accessoryType = UITableViewCellAccessoryNone;
-    if ([self.denominationLabel.text isEqualToString:@"Thaler"]) {
+
+    self.scrapValueLabel.text = scrapValueString;
+
+    NSData *obverseImage = self.coin.obverseImage;
+    NSUInteger dataBytes = obverseImage.length;
+    if (dataBytes>0) {
         self.accessoryType = UITableViewCellAccessoryDetailButton;
-        
     }
 }
 

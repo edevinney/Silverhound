@@ -11,6 +11,7 @@
 #import "CoinTableViewController.h"
 #import "CoinTableViewCell.h"
 #import "CountryHeaderViewCell.h"
+#import "CoinDetailViewController.h"
 
 @interface CoinTableViewController ()
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
@@ -27,6 +28,16 @@
 
 // segue ID when coin summary is tapped
 static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([[segue identifier] isEqualToString:@"showCoinDetail1"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        CoinTableViewCell *ctvcell = [self.tableView cellForRowAtIndexPath: indexPath];
+        
+        CoinDetailViewController *cdvc = (CoinDetailViewController *)[segue destinationViewController];
+        cdvc.coin = ctvcell.coin;
+    }
+}
 
 - (void) updateQuoteTitle {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];

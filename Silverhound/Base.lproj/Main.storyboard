@@ -147,7 +147,7 @@
                                     <outlet property="scrapValueLabel" destination="uIh-uc-KWu" id="pte-4B-VE7"/>
                                     <outlet property="startYearLabel" destination="hxa-kx-geB" id="Fy5-IS-Mlv"/>
                                     <outlet property="yearLabel" destination="hxa-kx-geB" id="zc7-1F-KWV"/>
-                                    <segue destination="scH-OD-cC6" kind="presentation" identifier="detailPushSegue" trigger="accessoryAction" modalTransitionStyle="crossDissolve" id="41p-ma-T1v"/>
+                                    <segue destination="scH-OD-cC6" kind="presentation" identifier="showCoinDetail1" trigger="accessoryAction" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="KFv-M3-LgN"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -175,13 +175,13 @@
                         <viewControllerLayoutGuide type="bottom" id="GTm-pg-pgc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleAspectFit" id="7lr-AR-KRT">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="94" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HV6-0r-GV9" userLabel="backView">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FR50FHerculeR.png" translatesAutoresizingMaskIntoConstraints="NO" id="jug-XL-D2n" userLabel="backImageView">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jug-XL-D2n" userLabel="backImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                     </imageView>
                                 </subviews>
@@ -193,7 +193,7 @@
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hw7-nK-eY4" userLabel="frontView">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FR50FHerculeO.png" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-CS-Kq6" userLabel="frontImageView">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-CS-Kq6" userLabel="frontImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                     </imageView>
                                 </subviews>
@@ -237,8 +237,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FR50FHerculeO.png" width="328" height="327"/>
-        <image name="FR50FHerculeR.png" width="329" height="330"/>
         <image name="ie.png" width="306" height="91"/>
     </resources>
 </document>

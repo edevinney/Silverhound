@@ -23,6 +23,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSData *coinImage = self.coin.obverseImage;
+    NSUInteger dataBytes = coinImage.length;
+    if (dataBytes>0) {
+        NSString *imageFile = [[NSString alloc] initWithBytes:[coinImage bytes] length: dataBytes encoding:NSASCIIStringEncoding];
+        self.frontImage.image = [UIImage imageNamed:imageFile];
+    }
+    coinImage = self.coin.reverseImage;
+    dataBytes = coinImage.length;
+    if (dataBytes>0) {
+        NSString *imageFile = [[NSString alloc] initWithBytes:[coinImage bytes] length: dataBytes encoding:NSASCIIStringEncoding];
+        self.backImage.image = [UIImage imageNamed:imageFile];
+    }
+
+    
     // Do any additional setup after loading the view.
     /*
      * spin/flip
