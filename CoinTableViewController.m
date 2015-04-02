@@ -42,10 +42,10 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
     NSString *quoteString = [oneShotNumberFormatter stringFromNumber:[NSNumber numberWithFloat:appDelegate.lastSilverQuote]];
     
     NSDateFormatter *oneShotDateFormatter = [[NSDateFormatter alloc]init];
-    [oneShotDateFormatter setDateFormat:@"dd MMM yyyy"];
+    [oneShotDateFormatter setDateFormat:@"d MMM yyyy"];
     
     
-    self.navItem.title = [NSString stringWithFormat:@"Silver: %@/oz on %@",quoteString,[oneShotDateFormatter stringFromDate: appDelegate.lastSilverQuoteDate]];
+    self.navItem.prompt = [NSString stringWithFormat:@"Silver: %@/oz on %@",quoteString, [oneShotDateFormatter stringFromDate: appDelegate.lastSilverQuoteDate]];
 }
 
 
