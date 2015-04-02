@@ -27,13 +27,12 @@
     [super viewDidLoad];
 
     if (self.coin.synonyms.length>0)
-        self.descriptionLabel.text = [NSString stringWithFormat:@"%@, %@",
-                                  self.coin.denomination,
+        self.descriptionLabel.text = [NSString stringWithFormat:@"AKA: %@",
                                   self.coin.synonyms];
     else
         self.descriptionLabel.text = self.coin.denomination;
 
-    self.diameterLabel.text = [NSString stringWithFormat:@"%.2f mm %.2fg fine silver",
+    self.diameterLabel.text = [NSString stringWithFormat:@"%.2f mm, %.2fg fine silver",
                                [self.coin.diameter_mm floatValue],
                                [self.coin.fineweightAg_g floatValue]];
 

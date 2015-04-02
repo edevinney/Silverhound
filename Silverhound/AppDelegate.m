@@ -159,7 +159,8 @@ NSString *kLastSilverQuoteSetting = @"lastSilverQuote";
 // Synchronous request preferred here, as it's only called once and needed for app setup.
 -(void) getSyncSilverQuote
 {
-    NSURLRequest * urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://services.packetizer.com/spotprices/?f=xml"]];
+    NSURLRequest * urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://services.packetizer.com/spotprices/?f=xml"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:20.0];
+    
     NSURLResponse * response = nil;
     NSError * error = nil;
     NSData * data = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
