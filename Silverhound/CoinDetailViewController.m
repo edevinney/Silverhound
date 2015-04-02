@@ -14,6 +14,8 @@
 
 @implementation CoinDetailViewController
 
+@synthesize descriptionLabel, diameterLabel, notesLabel;
+
 @synthesize coin;
 @synthesize startTouchPosition;
 @synthesize distortion, scale;
@@ -23,6 +25,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    if (self.coin.synonyms.length>0)
+        self.descriptionLabel.text = [NSString stringWithFormat:@"%@, %@",
+                                  self.coin.denomination,
+                                  self.coin.synonyms];
+    else
+        self.descriptionLabel.text = self.coin.denomination;
+
+    self.diameterLabel.text = [NSString stringWithFormat:@"%.2f mm %.2fg fine silver",
+                               [self.coin.diameter_mm floatValue],
+                               [self.coin.fineweightAg_g floatValue]];
+
+    self.notesLabel.text = self.coin.notes;
     
     NSData *coinImage = self.coin.obverseImage;
     NSUInteger dataBytes = coinImage.length;

@@ -33,6 +33,7 @@
 
     // Configure the cell for each coin. These compound strings need i18n help.
     self.denominationLabel.text = self.coin.denomination;
+    
     self.yearLabel.text = [NSString stringWithFormat:@"%@ - %@",[self.coin.startYear stringValue], [self.coin.endYear stringValue]];
 
     self.descriptionLabel.text = [NSString stringWithFormat:@"%.3fg total, %.3f fine",

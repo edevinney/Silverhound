@@ -11,11 +11,6 @@
 
 @interface CoinTableViewCell : UITableViewCell {
     UILabel *denominationLabel;
-    UILabel *startYearLabel;
-    UILabel *endYearLabel;
-    UILabel *silverGramsLabel;
-    UILabel *scrapValueLabel;
-    UILabel *synonymLabel;
 }
 @property (nonatomic, strong) Coin *coin;
 @property (nonatomic, retain) IBOutlet UILabel *denominationLabel;
