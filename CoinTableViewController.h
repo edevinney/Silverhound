@@ -14,4 +14,6 @@
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navItem;
 
+- (IBAction)refresh:(UIRefreshControl *)sender;
+
 @end

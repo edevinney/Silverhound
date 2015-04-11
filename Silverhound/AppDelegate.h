@@ -22,6 +22,7 @@
 @property (strong, nonatomic)CoinTableViewController *CTVController;
 
 - (void)saveContext;
+- (void)updateSpotSilver;
 - (NSURL *)applicationDocumentsDirectory;
 
 

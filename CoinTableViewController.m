@@ -23,6 +23,19 @@
 {
 }
 
+- (IBAction)refresh:(UIRefreshControl *)sender {
+    [self.refreshControl beginRefreshing];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.lastSilverQuote = 6.66;
+    [appDelegate updateSpotSilver];
+    [self updateQuoteTitle];
+
+    [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
+}
+
+
 
 @synthesize navItem;
 
