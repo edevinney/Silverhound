@@ -7,6 +7,9 @@
 //
 
 #import "CoinDetailViewController.h"
+#import "GAI.h"
+#import "GAIFields.h"
+#import "GAIDictionaryBuilder.h"
 
 @interface CoinDetailViewController ()
 
@@ -22,6 +25,20 @@
 @synthesize frontView, backView;
 @synthesize frontImage, backImage;
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    
+    // This screen name value will remain set on the tracker and sent with
+    // hits until it is set to a new value or to nil.
+    [tracker set:kGAIScreenName value:@"CoinDetailView"];
+    
+    // manual screen tracking
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -114,8 +131,8 @@
     CGPoint currentTouchPosition = [touch locationInView:self.view];
     
     // If the swipe tracks correctly.
-    if (fabsf(startTouchPosition.x - currentTouchPosition.x) >= HORIZ_SWIPE_DRAG_MIN &&
-        fabsf(startTouchPosition.y - currentTouchPosition.y) <= VERT_SWIPE_DRAG_MAX)
+    if (fabsf((float)(startTouchPosition.x - currentTouchPosition.x)) >= HORIZ_SWIPE_DRAG_MIN &&
+        fabsf((float)(startTouchPosition.y - currentTouchPosition.y)) <= VERT_SWIPE_DRAG_MAX)
     {
         // It appears to be a swipe.
         if (startTouchPosition.x < currentTouchPosition.x)

@@ -13,6 +13,10 @@
 #import "CountryHeaderViewCell.h"
 #import "CoinDetailViewController.h"
 
+#import "GAI.h"
+#import "GAIFields.h"
+#import "GAIDictionaryBuilder.h"
+
 @interface CoinTableViewController ()
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @end
@@ -45,7 +49,7 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([[segue identifier] isEqualToString:@"showCoinDetail1"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-        CoinTableViewCell *ctvcell = [self.tableView cellForRowAtIndexPath: indexPath];
+        CoinTableViewCell *ctvcell = (CoinTableViewCell*)[self.tableView cellForRowAtIndexPath: indexPath];
         
         CoinDetailViewController *cdvc = (CoinDetailViewController *)[segue destinationViewController];
         cdvc.coin = ctvcell.coin;
@@ -72,6 +76,20 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
     self.navItem.prompt = [NSString stringWithFormat:@"Silver: %@/oz on %@",quoteString, [oneShotDateFormatter stringFromDate: appDelegate.lastSilverQuoteDate]];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    
+    // This screen name value will remain set on the tracker and sent with
+    // hits until it is set to a new value or to nil.
+    [tracker set:kGAIScreenName value:@"CoinTableView"];
+    
+    // manual screen tracking
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -161,7 +179,7 @@ static NSString *kShowCoinDetailSegueID = @"showCoinDetail";
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
     // Display the country names as section headings.
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+//    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
 
     return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
 }

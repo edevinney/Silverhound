@@ -10,6 +10,8 @@
 #import "CoinTableViewController.h"
 #import "Coin.h"
 
+#import "GAI.h"
+
 NSString *kLastSilverQuoteDateSetting = @"lastSilverQuoteDate";
 NSString *kLastSilverQuoteSetting = @"lastSilverQuote";
 
@@ -37,9 +39,18 @@ NSString *kLastSilverQuoteSetting = @"lastSilverQuote";
 @synthesize managedObjectModel=_managedObjectModel, managedObjectContext=_managedObjectContext, persistentStoreCoordinator=_persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    // pass down our managedObjectContext to our table view controller
+
+    // Google Analytics init
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    [GAI sharedInstance].dispatchInterval = 20;
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
     
+    // Initialize tracker. Replace with your tracking ID.
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-1557917-11"];
+
+    
+    // pass down our managedObjectContext to our table view controller
+
     UINavigationController *uinavcontroller = (UINavigationController *)self.window.rootViewController;
     CoinTableViewController *coinTVC = (CoinTableViewController *)uinavcontroller.topViewController;
     coinTVC.managedObjectContext = self.managedObjectContext;

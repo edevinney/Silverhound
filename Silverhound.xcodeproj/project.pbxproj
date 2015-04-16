@@ -33,6 +33,10 @@
 		64858A2E1AB21375006E496D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64858A2D1AB21375006E496D /* Images.xcassets */; };
 		64858A311AB21375006E496D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64858A2F1AB21375006E496D /* LaunchScreen.xib */; };
 		64858A3D1AB21375006E496D /* SilverhoundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64858A3C1AB21375006E496D /* SilverhoundTests.m */; };
+		648BBAFA1AD8B7C600070504 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 648BBAF91AD8B7C600070504 /* libGoogleAnalyticsServices.a */; };
+		648BBAFC1AD8BB5700070504 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 648BBAFB1AD8BB5700070504 /* SystemConfiguration.framework */; };
+		648BBAFE1AD8BB6400070504 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 648BBAFD1AD8BB6400070504 /* libz.dylib */; };
+		648BBB001AD8BB7600070504 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 648BBAFF1AD8BB7600070504 /* libsqlite3.dylib */; };
 		649986831AB215A900045F5A /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 649986821AB215A900045F5A /* Contents.json */; };
 		6499868F1AB2713200045F5A /* CoinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6499868D1AB2713200045F5A /* CoinTableViewCell.m */; };
 		649986961AB2749F00045F5A /* CoinTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 649986951AB2749F00045F5A /* CoinTableViewController.m */; };
@@ -133,6 +137,20 @@
 		64858A361AB21375006E496D /* SilverhoundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SilverhoundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64858A3B1AB21375006E496D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64858A3C1AB21375006E496D /* SilverhoundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SilverhoundTests.m; sourceTree = "<group>"; };
+		648BBAEF1AD8B79F00070504 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		648BBAF01AD8B79F00070504 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		648BBAF11AD8B79F00070504 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		648BBAF21AD8B79F00070504 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		648BBAF31AD8B79F00070504 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		648BBAF41AD8B79F00070504 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		648BBAF51AD8B79F00070504 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		648BBAF61AD8B79F00070504 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		648BBAF71AD8B79F00070504 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		648BBAF81AD8B79F00070504 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		648BBAF91AD8B7C600070504 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../GoogleAnalyticsServicesiOS_3.10/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		648BBAFB1AD8BB5700070504 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		648BBAFD1AD8BB6400070504 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		648BBAFF1AD8BB7600070504 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		649986821AB215A900045F5A /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = Silverhound/Images.xcassets/AppIcon.appiconset/Contents.json; sourceTree = "<group>"; };
 		6499868C1AB2713200045F5A /* CoinTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinTableViewCell.h; sourceTree = "<group>"; };
 		6499868D1AB2713200045F5A /* CoinTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoinTableViewCell.m; sourceTree = "<group>"; };
@@ -200,7 +218,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				648BBB001AD8BB7600070504 /* libsqlite3.dylib in Frameworks */,
+				648BBAFE1AD8BB6400070504 /* libz.dylib in Frameworks */,
+				648BBAFC1AD8BB5700070504 /* SystemConfiguration.framework in Frameworks */,
 				649986981AB27D5200045F5A /* CoreData.framework in Frameworks */,
+				648BBAFA1AD8B7C600070504 /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +239,9 @@
 		64858A111AB21375006E496D = {
 			isa = PBXGroup;
 			children = (
+				648BBAFF1AD8BB7600070504 /* libsqlite3.dylib */,
+				648BBAFD1AD8BB6400070504 /* libz.dylib */,
+				648BBAFB1AD8BB5700070504 /* SystemConfiguration.framework */,
 				649986971AB27D5200045F5A /* CoreData.framework */,
 				649986821AB215A900045F5A /* Contents.json */,
 				64858A1C1AB21375006E496D /* Silverhound */,
@@ -253,6 +278,7 @@
 				64858A2A1AB21375006E496D /* Main.storyboard */,
 				64B1AD5D1AC0F4A90087A656 /* ur-Silverhound.sqlite */,
 				64858A241AB21375006E496D /* Silverhound.xcdatamodeld */,
+				648BBAEE1AD8B75500070504 /* Google Analytics */,
 				64858A2D1AB21375006E496D /* Images.xcassets */,
 				64858A1D1AB21375006E496D /* Supporting Files */,
 			);
@@ -336,6 +362,24 @@
 				64858A3B1AB21375006E496D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		648BBAEE1AD8B75500070504 /* Google Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				648BBAF91AD8B7C600070504 /* libGoogleAnalyticsServices.a */,
+				648BBAEF1AD8B79F00070504 /* GAI.h */,
+				648BBAF01AD8B79F00070504 /* GAIDictionaryBuilder.h */,
+				648BBAF11AD8B79F00070504 /* GAIEcommerceFields.h */,
+				648BBAF21AD8B79F00070504 /* GAIEcommerceProduct.h */,
+				648BBAF31AD8B79F00070504 /* GAIEcommerceProductAction.h */,
+				648BBAF41AD8B79F00070504 /* GAIEcommercePromotion.h */,
+				648BBAF51AD8B79F00070504 /* GAIFields.h */,
+				648BBAF61AD8B79F00070504 /* GAILogger.h */,
+				648BBAF71AD8B79F00070504 /* GAITrackedViewController.h */,
+				648BBAF81AD8B79F00070504 /* GAITracker.h */,
+			);
+			name = "Google Analytics";
 			sourceTree = "<group>";
 		};
 		64C158971AC3391E001BA1B1 /* famfamfam_flag_icons */ = {
@@ -669,6 +713,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Silverhound/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleAnalyticsServicesiOS_3.10",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -679,6 +727,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Silverhound/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleAnalyticsServicesiOS_3.10",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

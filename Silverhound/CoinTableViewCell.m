@@ -19,7 +19,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([[segue identifier] isEqualToString:@"showCoinDetail1"]){
-        CoinDetailViewController *cdvc = (CoinDetailViewController *)[segue destinationViewController];
+ //       CoinDetailViewController *cdvc = (CoinDetailViewController *)[segue destinationViewController];
     }
 }
 
