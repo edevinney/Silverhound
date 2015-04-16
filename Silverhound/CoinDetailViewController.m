@@ -118,33 +118,15 @@
 #define HORIZ_SWIPE_DRAG_MIN  12
 #define VERT_SWIPE_DRAG_MAX    4
 
+// Could use a gesture recognizer, but total overkill for just wanting to grab a tap.
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
-    startTouchPosition = [touch locationInView:self.view];
-    [self flip];
+    startTouchPosition = [touch locationInView:self.frontView];
+    if (CGRectContainsPoint(self.frontView.bounds, startTouchPosition))
+        [self flip];
 }
 
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch *touch = [touches anyObject];
-    CGPoint currentTouchPosition = [touch locationInView:self.view];
-    
-    // If the swipe tracks correctly.
-    if (fabsf((float)(startTouchPosition.x - currentTouchPosition.x)) >= HORIZ_SWIPE_DRAG_MIN &&
-        fabsf((float)(startTouchPosition.y - currentTouchPosition.y)) <= VERT_SWIPE_DRAG_MAX)
-    {
-        // It appears to be a swipe.
-        if (startTouchPosition.x < currentTouchPosition.x)
-            ;//           [self myProcessRightSwipe:touches withEvent:event];
-        else
-            ;//            [self myProcessLeftSwipe:touches withEvent:event];
-    }
-    else
-    {
-        // Process a non-swipe event.
-    }
-}
 
 #pragma mark -
 #pragma mark Spin/Flip
